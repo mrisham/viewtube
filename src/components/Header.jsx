@@ -1,17 +1,27 @@
+import { useDispatch } from "react-redux";
+import { toggleMenu } from "../utils/appSlice";
+
 const Header = () => {
+  const dispatch = useDispatch();
+  const handleToggle = () => {
+    dispatch(toggleMenu());
+  };
   return (
     <div className="grid grid-flow-col m-2 p-2 shadow-lg ">
       <div className="flex col-span-1">
         <img
-          className="h-10"
+          onClick={handleToggle}
+          className="h-10 cursor-pointer"
           src="https://cdn.iconscout.com/icon/free/png-512/free-hamburger-menu-462145.png?f=webp&w=256"
           alt="menu"
         />
-        <img
-          className="h-14 mx-7"
-          src="https://1000logos.net/wp-content/uploads/2017/05/Youtube-logo.jpg"
-          alt="youtube-logo"
-        />
+        <a href="/">
+          <img
+            className="h-14 mx-7 cursor-pointer"
+            src="https://1000logos.net/wp-content/uploads/2017/05/Youtube-logo.jpg"
+            alt="youtube-logo"
+          />
+        </a>
       </div>
       <div className="col-span-10">
         <input
