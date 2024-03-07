@@ -8,7 +8,7 @@ import harmBurgerIcon from "../assets/icons/hamburger.svg";
 import mickIcon from "../assets/icons/mike.svg";
 import createIcon from "../assets/icons/create.svg";
 import bellIcon from "../assets/icons/bell.svg";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -17,7 +17,7 @@ const Header = () => {
 
   const searchCache = useSelector((store) => store.search);
   const dispatch = useDispatch();
-  // let navigate = useNavigate();
+  let navigate = useNavigate();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -46,7 +46,7 @@ const Header = () => {
   const handleSuggestion = (event) => {
     setSearchQuery(event.target.innerText);
     setShowSuggestions(false);
-    // navigate("/results?search_query=" + encodeURI(event.target.innerText));
+    navigate("/results?search_query=" + encodeURI(event.target.innerText));
   };
 
   const toggleMenuHandler = () => {
