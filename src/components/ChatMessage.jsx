@@ -8,12 +8,15 @@ const ChatMessage = ({ name, message }) => {
   return (
     <div className="flex items-center p-2">
       <img
-        className="h-10 "
-        src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png"
+        className="h-6 rounded-full"
         alt="user-icon"
+        src="https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png"
       />
-      <span className="font-bold px-2">{name}:</span>
-      <span>{message}</span>
+
+      <span className="font-medium text-[13px] px-2 text-gray-500">{name}</span>
+      <span className="text-[13px] break-words overflow-x-hidden">
+        {message}
+      </span>
     </div>
   );
 };
