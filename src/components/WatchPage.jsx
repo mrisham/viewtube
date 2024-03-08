@@ -31,15 +31,15 @@ const WatchPage = () => {
     const recJson = await recommendedVideoData.json();
     setVideo(videoJson?.items[0]);
     setRecommendedVideo(recJson?.items);
-    console.log(videoJson?.items[0]);
-    console.log(recJson.items);
+    // console.log(videoJson?.items[0]);
+    // console.log(recJson.items);
   };
   return (
     <div className={`${!isMenuOpen ? "px-20" : "px-3"} col-span-11 flex pt-6`}>
       <div className="flex-grow-9">
         <div>
           <iframe
-            width="900"
+            width="800"
             height="500"
             src={
               "https://www.youtube.com/embed/" +
@@ -135,7 +135,7 @@ const WatchPage = () => {
               key={video?.id?.videoId}
               to={"/watch?v=" + video?.id?.videoId}
             >
-              <div className="px-3 m-2 flex">
+              <div className="px-3 m-2  flex">
                 <img
                   className="rounded-xl w-[168px] h-[94px] "
                   alt="thumbnail"

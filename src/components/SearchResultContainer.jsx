@@ -26,11 +26,8 @@ const SearchResultContainer = () => {
     <div className="px-3 col-span-11">
       <div className="flex flex-col px-3">
         <div className="p-2 m-2">
-          {searchedVideos?.map((video) => (
-            <Link
-              key={video?.id?.videoId}
-              to={"/watch?v=" + video?.id?.videoId}
-            >
+          {searchedVideos?.map((video, index) => (
+            <Link key={index} to={"/watch?v=" + video?.id?.videoId}>
               <div className="px-3 m-4 flex">
                 <img
                   className="rounded-lg w-[360px] h-[202px] "

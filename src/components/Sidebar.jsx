@@ -1,19 +1,16 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-
 import homeIcon from "../assets/icons/home.svg";
 import shortsIcon from "../assets/icons/shorts.svg";
 import subscriptionsIcon from "../assets/icons/subscriptions.svg";
 import redLiveIcon from "../assets/icons/red-live.svg";
-
 import libraryIcon from "../assets/icons/library.svg";
 import historyIcon from "../assets/icons/history.svg";
 import yourVideosIcon from "../assets/icons/yourVideos.svg";
 import watchLaterIcon from "../assets/icons/watchLater.svg";
 import likedVideosIcon from "../assets/icons/likedVideos.svg";
 import showMoreIcon from "../assets/icons/showMore.svg";
-
 import trendingIcon from "../assets/icons/trending.svg";
 import shoppingIcon from "../assets/icons/shopping.svg";
 import musicIcon from "../assets/icons/music.svg";
@@ -24,24 +21,22 @@ import newsIcon from "../assets/icons/news.svg";
 import sportsIcon from "../assets/icons/sports.svg";
 import learningIcon from "../assets/icons/learning.svg";
 import fashionAndBeautyIcon from "../assets/icons/fashionAndBeauty.svg";
-
 import ytPremiumIcon from "../assets/icons/yt-premium.svg";
 import ytStudioIcon from "../assets/icons/yt-studio.svg";
 import ytMusicIcon from "../assets/icons/yt-music.svg";
 import ytKidsIcon from "../assets/icons/yt-kids.svg";
-
 import settingsIcon from "../assets/icons/settings.svg";
 import reportHistoryIcon from "../assets/icons/reportHistory.svg";
 import helpIcon from "../assets/icons/help.svg";
 import sendFeedbackIcon from "../assets/icons/sendFeedback.svg";
-
+import "../custom-scrollbar.css";
 const Sidebar = () => {
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
 
   if (!isMenuOpen) return null;
 
   return (
-    <div className="p-5 col-span-1 max-h-screen hover:overflow-y-scroll overflow-hidden overscroll-contain sticky top-[64px] z-90 bg-white">
+    <div className="p-5 col-span-1 max-h-screen hover:overflow-y-scroll overflow-hidden overscroll-contain sticky top-[64px] z-90 bg-white scrollbar-style">
       <ul>
         <li className="my-1 p-1 py-2 hover:bg-gray-100 cursor-pointer rounded-lg">
           <NavLink to="/">
